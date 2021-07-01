@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jakewharton.threetenabp:threetenabp:1.1.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a24e11f352020076c8678c03f665c8f9/transformed/threetenabp-1.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8302efa7e0d7eb1c59ec7d820da640c7/transformed/jetified-threetenabp-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8302efa7e0d7eb1c59ec7d820da640c7/transformed/jetified-threetenabp-1.1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8302efa7e0d7eb1c59ec7d820da640c7/transformed/jetified-threetenabp-1.1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.threetenabp/threetenabp/1.1.0/875b0db974db709c0ce4eed141b499ab3bd01c09/threetenabp-1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jakewharton.threetenabp/threetenabp/1.1.0/308f6c56516ed30447fd548a1dd2649676b511f3/threetenabp-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
