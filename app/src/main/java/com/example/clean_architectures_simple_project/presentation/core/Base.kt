@@ -1,11 +1,15 @@
 package com.example.clean_architectures_simple_project.presentation.core
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
 //------------------------------------------------------------------------------
@@ -16,9 +20,8 @@ import kotlin.coroutines.CoroutineContext
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-abstract class BaseCustomActivity :AppCompatActivity(), CoroutineScope {
+abstract class BaseCustomActivity : AppCompatActivity(), CoroutineScope {
     private lateinit var job: Job
-
 
 
     override val coroutineContext: CoroutineContext
@@ -58,7 +61,35 @@ abstract class BaseCustomFragment : Fragment(), CoroutineScope {
 
 }
 
+abstract class BaseCustomViewModel() : ViewModel()
 
+
+fun <R> BaseCustomActivity.ActivityLaunch(Block: suspend () -> R) {
+
+    launch {
+        try {
+            Block()
+        } catch (e: Exception) {
+            Error::set
+        }
+
+    }
+
+}
+
+
+fun <R> BaseCustomViewModel.ViewModelLaunch(Block: suspend () -> R) {
+
+    viewModelScope.launch {
+        try {
+            Block()
+        } catch (e: Exception) {
+            Error::set
+        }
+
+    }
+
+}
 
 
 

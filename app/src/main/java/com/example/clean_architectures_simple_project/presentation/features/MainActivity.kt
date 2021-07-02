@@ -7,11 +7,9 @@ import com.example.clean_architectures_simple_project.Domain.UseCase.getUserAll
 import com.example.clean_architectures_simple_project.Domain.UseCase.loadData
 import com.example.clean_architectures_simple_project.Gateway.Database.LiveUsers
 import com.example.clean_architectures_simple_project.R
-import com.example.clean_architectures_simple_project.presentation.core.BaseCustomActivity
-import com.example.clean_architectures_simple_project.presentation.core.with
+import com.example.clean_architectures_simple_project.presentation.core.*
+
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 
 //------------------------------------------------------------------------------
@@ -37,12 +35,12 @@ class MainActivity : BaseCustomActivity() {
 
 class MainActivityViewModel(
     var user: suspend () -> LiveUsers = { getUserAll() }
-) : ViewModel()
+) : BaseCustomViewModel()
 
 private fun MainActivity.bindViews() = with(viewModel) {
 
 
-    launch {
+    ViewModelLaunch {
         user.invoke().observe(this@bindViews, Observer { data_txt.text = it.takeIf{ it.isNotEmpty() }?.let {  it.last().title } });
 
     }
