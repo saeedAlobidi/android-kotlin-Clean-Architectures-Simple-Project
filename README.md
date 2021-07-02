@@ -1,4 +1,4 @@
-<b>This is an example of a simple CRUD application with layered software  base on clean-architecture for Uncle Bob's.</b>
+<b>This is an example of a simple application with layered software base on clean-architecture  as application architecture   and mvvm as presentation architecture .</b>
 
  <br />
  
