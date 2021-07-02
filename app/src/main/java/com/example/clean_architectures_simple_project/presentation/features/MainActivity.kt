@@ -41,12 +41,15 @@ private fun MainActivity.bindViews() = with(viewModel) {
 
 
     ViewModelLaunch {
+
         user.invoke().observe(this@bindViews, Observer { data_txt.text = it.takeIf{ it.isNotEmpty() }?.let {  it.last().title } });
 
     }
 
+
     load_btn.setOnClickListener {
-        it.with { loadData((0..100).random()) }
+
+        it.with {  loadData((0..100).random()) }
     }
 
 }

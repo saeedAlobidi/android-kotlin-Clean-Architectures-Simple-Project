@@ -6,6 +6,6 @@ import java.lang.Exception
 object Error {
 
     fun set(e: Exception) {
-        Log.v("Error--from--saeed-->", "ssssssssssssss")
+        Log.v("Error--from--saeed-->", e.message.toString())
     }
 }

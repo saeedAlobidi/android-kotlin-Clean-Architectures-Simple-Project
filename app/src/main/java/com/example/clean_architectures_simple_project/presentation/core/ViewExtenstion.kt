@@ -19,8 +19,9 @@ fun View.with(callback: suspend () -> Unit) = GlobalScope.launch {
     try {
         callback()
     } catch (e: Exception) {
-        Error::set
+        Error.set(e)
     }
+
 
 }
 
