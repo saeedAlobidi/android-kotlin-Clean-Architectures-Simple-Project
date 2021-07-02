@@ -1,5 +1,6 @@
 package com.example.clean_architectures_simple_project.Gateway.GatewayImplementor
 
+import android.util.Log
 import com.example.clean_architectures_simple_project.Entity.UserGateway
 import com.example.clean_architectures_simple_project.Gateway.Database.Users
 import com.example.clean_architectures_simple_project.Gateway.withSuspendGateway

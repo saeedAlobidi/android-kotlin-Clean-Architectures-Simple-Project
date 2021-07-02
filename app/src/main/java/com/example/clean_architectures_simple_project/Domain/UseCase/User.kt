@@ -8,6 +8,7 @@ package com.example.clean_architectures_simple_project.Domain.UseCase
 //------------------------------------------------------------------------------
 
 
+import android.util.Log
 import com.example.clean_architectures_simple_project.Domain.withSuspendDomain
 import com.example.clean_architectures_simple_project.Gateway.Database.Users
 import kotlinx.coroutines.Dispatchers

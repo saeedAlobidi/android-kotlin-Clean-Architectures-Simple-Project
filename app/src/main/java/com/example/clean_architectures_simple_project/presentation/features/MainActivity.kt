@@ -1,6 +1,7 @@
 package com.example.clean_architectures_simple_project.presentation.features
 
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.clean_architectures_simple_project.Domain.UseCase.getUserAll
 import com.example.clean_architectures_simple_project.Domain.UseCase.loadData
@@ -10,6 +11,7 @@ import com.example.clean_architectures_simple_project.presentation.core.BaseCust
 import com.example.clean_architectures_simple_project.presentation.core.with
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 
 //------------------------------------------------------------------------------
@@ -41,12 +43,12 @@ private fun MainActivity.bindViews() = with(viewModel) {
 
 
     launch {
-        user.invoke().observe(this@bindViews, Observer { data_txt.text = it[0].title });
+        user.invoke().observe(this@bindViews, Observer { data_txt.text = it.takeIf{ it.isNotEmpty() }?.let {  it.last().title } });
 
     }
 
     load_btn.setOnClickListener {
-        it.with { loadData(1) }
+        it.with { loadData((0..100).random()) }
     }
 
 }
